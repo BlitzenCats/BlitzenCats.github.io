@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Thinker</title>
+    <title>Blitzen's Site</title>
     <link rel="stylesheet" href="styles/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body>
+<body class = "site-body">
     <header class="site-header">
         <h1>The Thinker</h1>
     </header>
@@ -35,15 +35,23 @@
     </nav>
 
     <main>
-        <section class="intro">
+        <div class="sections-container" style="display: flex; gap: 2rem;">
+            <section class="intro" style="flex: 1;">
             <h2>About Me</h2>
             <p>Website stuff!</p>
-        </section>
+            </section>
 
-        <section class="thoughts">
+            <section class="thoughts" style="flex: 1;">
             <h2>Daily Thoughts</h2>
             <p>Images + Captions here later?</p>
-        </section>
+            </section>
+        </div>
+
+        <form class="quiz-form">
+            what is 2+2?
+            <input type="text" id="answer">
+            <button>check</button>
+        </form>
     </main>
 
     <footer class="site-footer">

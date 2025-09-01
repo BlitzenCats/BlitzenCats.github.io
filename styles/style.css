@@ -1,25 +1,53 @@
 :root {
-    --header-grad-start: #ff7c24;
-    --header-grad-end: #ff9900;
-    --nav-bg: #ffe18e;
-    --text-color: #333;
+    --nav-bg: #ff910067;
+    --text-color: rgb(122, 122, 122);
     --title-font: 'Playfair Display', serif;
     --body-font: 'Roboto', sans-serif;
+    --body-bg: url('../sitebgver3.png');
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .site-header {
-    background: linear-gradient(90deg, var(--header-grad-start), var(--header-grad-end));
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.0);
     text-align: center;
-    padding: 40px 20px;
+
+    animation: fadeInUp 1s ease-out;
 }
 
 .site-header h1 {
     font-family: var(--title-font);
     font-size: 4rem;
-    color: var(--text-color);
+    color: rgb(197, 197, 197);
     font-weight: 700;
 }
 
+.site-body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-image: var(--body-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom bottom center;
+    padding: 20px 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+
+}
 .main-nav {
     display: flex;
     justify-content: center;
@@ -28,6 +56,10 @@
     background-color: var(--nav-bg);
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
 }
 
 .nav-icons {
@@ -38,27 +70,57 @@
 }
 
 .nav-icons a {
-    color: #555; 
+    color: #000000; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .nav-icons a:hover {
-    color: #000;
+    color: #ff8800;
 }
 
 .intro, .thoughts {
     max-width: 800px;
     margin: 40px auto;
+    background-color: var(--background-color);
     padding: 0 20px;
     text-align: center;
 }
 
 .site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    background-color: var(--nav-bg);
-    border-top: 1px solid #000000;
+    background-color: #ff9c1ac9;
+    height: 60px;
     font-size: 0.9rem;
     color: #555;
+    z-index: 100;
+}
+
+.intro h2{
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    color: rgb(197, 197, 197);
+    margin-bottom: 10px;
+    
+}
+
+.thoughts h2 {
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    color: rgb(197, 197, 197);
+    margin-bottom: 10px;
+}
+
+.quiz-form {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--nav-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
