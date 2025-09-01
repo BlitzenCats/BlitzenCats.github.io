@@ -1,6 +1,6 @@
 :root {
-    --header-grad-start: #ffc853;
-    --header-grad-end: #c1fcff;
+    --header-grad-start: #ff7c24;
+    --header-grad-end: #ff9900;
     --nav-bg: #ffe18e;
     --text-color: #333;
     --title-font: 'Playfair Display', serif;
@@ -8,7 +8,7 @@
 }
 
 .site-header {
-    background: linear-gradient(100deg, var(--header-grad-start), #fcc4a3, #f5b0b3, #e8a2c7, #d19ee0);
+    background: linear-gradient(90deg, var(--header-grad-start), var(--header-grad-end));
     text-align: center;
     padding: 40px 20px;
 }
